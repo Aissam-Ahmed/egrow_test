@@ -4,7 +4,7 @@ This repository contains my submission for the Full Stack Developer position tec
 
 ## Technologies Used
 
-- Laravel 11 (PHP 8.3) — Backend API
+- Laravel 12 (PHP 8.3) — Backend API
 - Nuxt 3 (Vue 3 + Vite) — Frontend SPA
 
 ## Project Status
