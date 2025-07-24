@@ -18,9 +18,10 @@ This repository contains my submission for the Full Stack Developer position tec
 ### Laravel Backend
 
 ```bash
-cd laravel-backend
+cd egrow_test
 cp .env.example .env
 composer install
 php artisan key:generate
 php artisan migrate
 php artisan serve
+php artisan db:seed
