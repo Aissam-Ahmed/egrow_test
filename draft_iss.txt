@@ -1,0 +1,18 @@
+ <div class="p-6 max-w-3xl mx-auto">
+        <h1 class="text-2xl font-bold mb-4">Project Summary</h1>
+
+        <input v-model="assignedTo" placeholder="Filter by assigned user" class="border px-3 py-2 mb-4 w-full rounded"
+            type="text" />
+
+        <div v-if="pending">Loading...</div>
+        <div v-else-if="error" class="text-red-600">❌ Error loading data</div>
+        <div v-else-if="data?.data" class="bg-white shadow rounded p-6 space-y-2">
+            <h2 class="text-xl font-semibold">{{ data.data.project }}</h2>
+            <div>Total Issues: {{ data.data.total_issues }}</div>
+            <div>Open Issues: {{ data.data.open_issues }}</div>
+            <div>Assigned to "{{ assignedTo || '—' }}": {{ data.data.assigned_to_issues }}</div>
+            <div class="text-red-500 font-semibold">
+                High Priority Unresolved: {{ data.data.high_priority_unresolved }}
+            </div>
+        </div>
+    </div>
